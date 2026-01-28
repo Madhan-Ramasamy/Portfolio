@@ -54,9 +54,10 @@ const App = () => {
       <div className="cursor-outline" ref={cursorOutline}></div>
       <div className="bg-spotlight"></div>
 
-      <nav className="navbar">
+      {/* Navbar with Fade In Animation */}
+      <nav className="navbar animate-fade-down">
         <div className="container nav-flex">
-          <h1 className="logo">MADHAN<span className="dot">.</span> R</h1>
+          <h1 className="logo">MADHAN<span className="dot">.</span></h1>
           <div className="nav-items">
             <a href="#about" className="nav-item">About</a>
             <a href="#skills" className="nav-item">Skills</a>
@@ -89,13 +90,12 @@ const App = () => {
             </div>
           </div>
           
-          <div className="hero-image">
+          <div className="hero-image animate-fade-in">
             <div className="img-container">
               <div className="img-frame">
                 <img src={profilePic} alt="Madhan Ramasamy" />
               </div>
               
-              {/* FLOATING CODE CHIPS */}
               <div className="code-chip c1">{'<React />'}</div>
               <div className="code-chip c2">{'npm install'}</div>
               <div className="code-chip c3">{'git push'}</div>
@@ -124,7 +124,6 @@ const App = () => {
           <h2 className="section-title">Featured Works</h2>
           
           <div className="project-grid">
-            {/* Project 1 */}
             <a href="https://dev-vault-react-2u7w.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-card">
               <div className="card-vis gradient-1">
                 <div className="vis-content">
@@ -140,7 +139,6 @@ const App = () => {
               </div>
             </a>
 
-            {/* Project 2 */}
             <div className="project-card">
               <div className="card-vis gradient-2">
                 <div className="vis-content">
