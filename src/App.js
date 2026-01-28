@@ -54,10 +54,9 @@ const App = () => {
       <div className="cursor-outline" ref={cursorOutline}></div>
       <div className="bg-spotlight"></div>
 
-      {/* Navbar with Fade In Animation */}
       <nav className="navbar animate-fade-down">
         <div className="container nav-flex">
-          <h1 className="logo">MADHAN<span className="dot">.</span></h1>
+          <h1 className="logo">MADHAN<span className="dot">.</span>R</h1>
           <div className="nav-items">
             <a href="#about" className="nav-item">About</a>
             <a href="#skills" className="nav-item">Skills</a>
@@ -96,10 +95,12 @@ const App = () => {
                 <img src={profilePic} alt="Madhan Ramasamy" />
               </div>
               
-              <div className="code-chip c1">{'<React />'}</div>
-              <div className="code-chip c2">{'npm install'}</div>
-              <div className="code-chip c3">{'git push'}</div>
-              <div className="code-chip c4">{'Python'}</div>
+              {/* NEW COLORFUL SYMBOLS */}
+              <div className="symbol-chip c1">{'</>'}</div>
+              <div className="symbol-chip c2">{'#'}</div>
+              <div className="symbol-chip c3">{'{ }'}</div>
+              <div className="symbol-chip c4">{'[ ]'}</div>
+              <div className="symbol-chip c5">{'\\'}</div>
             </div>
           </div>
         </div>
