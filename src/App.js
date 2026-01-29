@@ -58,7 +58,7 @@ const App = () => {
         <div className="container nav-flex">
           <h1 className="logo">MADHAN<span className="dot">.</span>R</h1>
           <div className="nav-items">
-            <a href="#about" className="nav-item">About</a>
+            <a href="#home" className="nav-item">About</a>
             <a href="#skills" className="nav-item">Skills</a>
             <a href="#projects" className="nav-item">Projects</a>
             <a href="#contact" className="nav-item contact-btn">Contact</a>

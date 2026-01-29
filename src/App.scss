@@ -7,6 +7,12 @@ $accent-purple: #7000ff;
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* --- SMOOTH SCROLLING FIX --- */
+html {
+  scroll-behavior: smooth; /* Enables the scrolling animation */
+  scroll-padding-top: 100px; /* Prevents Navbar from covering the section title */
+}
+
 @media (min-width: 992px) { 
   body { cursor: none; } 
   a, button, img { cursor: none; } 
@@ -117,33 +123,23 @@ a { text-decoration: none; color: inherit; }
 
   .hero-image {
     flex: 1; display: flex; justify-content: flex-end; position: relative;
-    
-    /* CRITICAL FIX: Overflow visible ensures chips aren't cut off */
+    /* Force visibility for chips */
     .img-container { 
       position: relative; width: 400px; height: 500px; max-width: 100%; 
       display: flex; justify-content: center; align-items: center;
-      overflow: visible; /* Ensure chips show */
+      overflow: visible; 
       z-index: 5;
     }
-
     .img-frame {
       width: 100%; height: 100%; position: relative; border-radius: 20px; overflow: hidden;
       img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; border-radius: 20px; }
       &:hover img { filter: grayscale(0%); transform: scale(1.02); }
     }
-
-    /* FLOATING CHIPS */
     .symbol-chip {
-      position: absolute; padding: 10px 18px; 
-      background: rgba(10, 10, 10, 0.95); /* Slightly darker for visibility */
-      backdrop-filter: blur(10px);
-      border: 1px solid; border-radius: 12px;
-      font-family: 'Consolas', monospace; font-size: 1.2rem; font-weight: bold;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
-      z-index: 20; /* FORCE ON TOP */
-      animation: float 4s ease-in-out infinite;
+      position: absolute; padding: 10px 18px; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px);
+      border: 1px solid; border-radius: 12px; font-family: 'Consolas', monospace; font-size: 1.2rem; font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 5; animation: float 4s ease-in-out infinite;
     }
-
     .c1 { top: -10px; left: -20px; color: #00f2ff; border-color: rgba(0, 242, 255, 0.4); animation-delay: 0s; }
     .c2 { top: 30px; right: -20px; color: #bd00ff; border-color: rgba(189, 0, 255, 0.4); animation-delay: 1.5s; }
     .c3 { bottom: 60px; left: -20px; color: #f2ff00; border-color: rgba(242, 255, 0, 0.4); animation-delay: 2.5s; }
@@ -151,10 +147,9 @@ a { text-decoration: none; color: inherit; }
     .c5 { top: 50%; right: -40px; color: #ff0055; border-color: rgba(255, 0, 85, 0.4); animation-delay: 1s; }
   }
 
-  /* --- FIX FOR SHORT SCREENS (e.g., 770x642) --- */
+  /* --- SHORT SCREEN FIX --- */
   @media (max-height: 720px) {
     min-height: auto; padding-top: 80px; padding-bottom: 2rem;
-    
     .hero-content { align-items: flex-start; }
     .hero-text {
       .big-name { font-size: 2.5rem; margin-bottom: 10px; }
@@ -162,19 +157,9 @@ a { text-decoration: none; color: inherit; }
       p { font-size: 0.95rem; margin-bottom: 1.5rem; }
       .btn { padding: 10px 25px; font-size: 0.9rem; }
     }
-
-    .img-container { 
-      width: 250px; height: 320px; 
-      margin-top: 30px; /* Space from navbar */
-    }
-    
-    /* Bring chips closer so they don't get cut off */
+    .img-container { width: 250px; height: 320px; margin-top: 30px; }
     .symbol-chip { font-size: 0.8rem; padding: 6px 12px; }
-    .c1 { top: -10px; left: -10px; } 
-    .c2 { top: 10px; right: -15px; } 
-    .c3 { bottom: 20px; left: -10px; } 
-    .c4 { bottom: -10px; right: 0px; }
-    .c5 { right: -20px; }
+    .c1 { top: -10px; left: -10px; } .c2 { top: 10px; right: -15px; } .c3 { bottom: 20px; left: -10px; } .c4 { bottom: -10px; right: 0px; } .c5 { right: -20px; }
   }
 
   /* MEDIA QUERIES FOR WIDTH */
