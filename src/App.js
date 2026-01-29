@@ -170,7 +170,7 @@ const App = () => {
             <h2 className="section-title">Let's Connect</h2>
             <div className="contact-grid">
               <a href="tel:+919597386180" className="contact-pill"><PhoneIcon /><span>+91 95973 86180</span></a>
-              <a href="mailto:madhanramasamy52@gmail.com" className="contact-pill"><MailIcon /><span>madhanramasamy52@gmail.com</span></a>
+              <a href="mailto:madhanramasamy2@gmail.com" className="contact-pill"><MailIcon /><span>madhanramasamy2@gmail.com</span></a>
               <a href="https://www.linkedin.com/in/madhan-ramasamy-a380b0293/" target="_blank" rel="noopener noreferrer" className="contact-pill"><LinkedInIcon /><span>LinkedIn</span></a>
             </div>
           </div>
